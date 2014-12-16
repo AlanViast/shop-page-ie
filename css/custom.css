@@ -130,7 +130,7 @@ body{
 }
 
 .row.remind-setting > .col-md-12 > .remind-setting-option > .btn.btn-save{
-  right: 114px;
+  right: 94px;
 }
 
 .btn-modify,
@@ -192,7 +192,7 @@ body{
   padding-top: 15px;
 }
  */
-.row.remind-setting > .col-md-12 > .remind-setting-option > .radio-group > div {
+.row.remind-setting > .col-md-12 > .remind-setting-option > .radio-group > span {
   margin-left: 30px;
 }
 

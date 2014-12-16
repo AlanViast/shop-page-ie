@@ -32,31 +32,39 @@
                 <div class="remind-setting-option hidden" data-remind-index="2">
                     <a href="#" class="btn btn-cancel pull-right btn-tab" data-remind-tab="1">取消</a>
                     <a href="#" class="btn btn-save pull-right btn-tab" data-remind-tab="1">保存</a>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 我的推文被转推
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 我的推文被收藏
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 我的推文被回复
                     </p>
                     <p class="radio-group">
-                        <input type="radio" name="remind" >全部提醒
-                        <input type="radio" name="remind" >仅关注的人提醒
+                        <span class="text-muted">
+                            <input type="radio" name="remind1" >全部提醒
+                        </span>
+                        <span class="text-muted">
+                            <input type="radio" name="remind1" >仅关注的人提醒
+                        </span>
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 我被某人关注
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 我收到一条私信
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 我被某人@
                     </p>
-                    <p class="radio-group">
-                        <input type="radio" name="remind" >全部提醒
-                        <input type="radio" name="remind" >仅关注的人提醒
+                    <p class="text-muted radio-group">
+                        <span class="text-muted">
+                            <input type="radio" name="remind2" >全部提醒
+                        </span>
+                        <span class="text-muted">
+                            <input type="radio" name="remind2" >仅关注的人提醒
+                        </span>
                     </p>
                 </div>
             </div>
@@ -71,19 +79,19 @@
                 <div class="remind-setting-option hidden" data-remind-index="2">
                     <a href="#" class="btn btn-cancel pull-right btn-tab" data-remind-tab="1">取消</a>
                     <a href="#" class="btn btn-save pull-right btn-tab" data-remind-tab="1">保存</a>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 充值， 取现的成功失败
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 投资项目成功
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 收到利息或者本金
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 债券交易订单信息
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 债券交易订单成功或失败信息
                     </p>
                 </div>
@@ -99,14 +107,14 @@
                 <div class="remind-setting-option hidden" data-remind-index="2">
                     <a href="#" class="btn btn-cancel pull-right btn-tab" data-remind-tab="1">取消</a>
                     <a href="#" class="btn btn-save pull-right btn-tab" data-remind-tab="1">保存</a>
-                    <p>
-                        <input type="checkbox"> 手机
+                    <p class="text-muted">
+                        <input class="text-muted"t type="checkbox"> 手机
                         <input type="checkbox"> 邮箱
                         <span class="padding-left-30">
                             关于融部落产品和功能更新的消息
                         </span>
                     </p>
-                    <p>
+                    <p class="text-muted">
                         <input type="checkbox"> 手机
                         <input type="checkbox"> 邮箱
                         <span class="padding-left-30">
@@ -127,6 +135,18 @@
             checkboxClass: 'icheckbox_minimal-grey',
             radioClass: 'iradio_minimal-grey',
             increaseArea: '20%' // optional
+          });
+
+          $('input').on("ifChecked", function(event){
+            $(this).parent().removeClass('disabled');
+            $(this).parents("p").removeClass('text-muted');
+            $(this).parents("span").removeClass('text-muted');
+          });
+
+          $('input').on("ifUnchecked", function(event){
+            $(this).parent().addClass('disabled');
+            $(this).parents("p").addClass('text-muted');
+            $(this).parents("span").addClass('text-muted');
           });
 
           $(".btn-tab").click(function(event) {
