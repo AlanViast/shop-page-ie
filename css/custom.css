@@ -1,0 +1,237 @@
+@charset "UTF-8";
+body{
+  font-family: "微软雅黑";
+}
+/* my modal start */
+.my-modal.modal-dialog > .modal-content{
+  border-radius: 20px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-header{
+  border-bottom: none;
+  padding: 0;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-footer{
+  border-top:none;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-header > .close {
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group{
+    margin-bottom: 10px;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group > .col-md-7 > input {
+  text-align: center;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group > .col-md-7 > .input-group.spinner > input:focus,
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group > .col-md-7 > input:focus {
+  border-color: #CCC;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group > .col-md-offset-1.col-md-7{
+  margin-left: 12%;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group > .col-md-12.text-center > h4,
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group > .col-md-offset-1.col-md-7 > h4{
+  font-weight: bold;
+  color: #8D98AC;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group > .col-md-6 > .btn.cancel{
+    color: #F8846D;
+    border-color: #F8846D;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group.error {
+  display: none;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group.error >  .col-md-9{
+    font-size: 10px;
+    color: #F8846D;
+    padding-left: 5px;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group.error >  .col-md-9.gray-text{
+    color: gray;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group.error >  .col-md-9.gray-text > a{
+  color: gray;
+  text-decoration: underline;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group >  .col-md-3.icon-safe{
+    text-align: right;
+    line-height: 34px;
+    padding-right: 7px;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group > .col-md-7{
+    padding-left: 5px;
+}
+
+.my-modal.modal-dialog > .modal-content > .modal-body > form >.form-group > label.control-label.col-md-3{
+    text-align: right;
+    padding-right: 0;
+}
+/* my modal end */
+
+
+/* Green modal Start*/
+.modal-dialog.success > .modal-content{
+    background-color: #93C373;
+    border-color: #93C373;
+}
+.modal-dialog.success > .modal-content > .modal-body{
+    color: white;
+}
+
+.modal-dialog.success > .modal-content > .modal-body > .row > .btn.btn-success{
+    border-color: white;
+    background-color: #93C373;
+    word-spacing: 5px;
+}
+
+.modal-xs {
+    width: 120px;
+}
+
+.modal-dialog.success > .modal-content{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* Green modal End*/
+
+
+/* remind setting Start */
+
+.row.remind-setting > .col-md-12 > .pull-right {
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.row.remind-setting > .col-md-12 > .btn.pull-right{
+  border: 1px solid #DDD;
+  color: #8D98AC;
+}
+
+.row.remind-setting > .col-md-12 > .pull-right.btn-save{
+  color: #fff;
+  background-color: #8D98AC;
+  border-color: #8D98AC;
+}
+
+.row.remind-setting > hr.text-center{
+  border-color: #D8D8D8;
+}
+
+
+
+.row.remind-setting > .text-center > h1,
+.row.remind-setting > .col-md-12 > h4 {
+  color: #8D98AC;
+  font-weight: bold;
+}
+
+.row.remind-setting > .col-md-12 > p{
+  color: #BBB;
+}
+
+.row.remind-setting > .col-md-12{
+  border-bottom: 1px solid #F4F4F4;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.row.remind-setting > .col-md-12 > .remind-setting-option{
+  padding-top: 15px;
+}
+
+.row.remind-setting > .col-md-12 > .remind-setting-option > .radio-group > div {
+  margin-left: 30px;
+}
+
+.row.remind-setting > .col-md-12 > .remind-setting-option > p {
+  line-height: 20px;
+}
+
+.row.remind-setting > .col-md-12 > .remind-setting-option > p > div{
+  margin-right: 5px;
+}
+
+.row.remind-setting > .col-md-12 > h4 > img{
+  padding-bottom: 3px;
+  padding-left: 8px;
+}
+
+
+/* remind setting End */
+
+/* Custom style*/
+.btn-gray {
+  color: #fff;
+  background-color: #7C7C9A;
+  border-color: #939393;
+}
+
+.padding-left-30{
+    padding-left: 30px;
+}
+
+.margin-top-5{
+    margin-top: 5px;
+}
+
+.margin-bottom-5{
+    margin-bottom: 5px;
+}
+.btn{
+    word-spacing: 10px;
+}
+
+.text-gray{
+  color:#8D98AC;
+  font-weight: 100;
+}
+
+.btn-pay{
+  color: #FFF;
+  background-color: #F8846D;
+  border-color: #F8846D;
+}
+.btn-pay:focus,
+.btn-pay:hover{
+  color: #FFF;
+  background-color: #F8846D;
+  border-color: #F8846D;
+}
+
+
+.stepper{
+  width:150px;
+}
+.stepper .stepper-input{
+  text-align: center;
+}
+
+
+
+/* Override bootstrap-spinner */
+.input-group-addon{
+  padding: 0px 7px;
+  background-color: #FFF;
+}
+

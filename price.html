@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布申购, 转让</title>
+    <link rel="stylesheet" href="./css/getBootstrap.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link href="./css/bootstrap-spinner.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/custom.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="my-modal modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-7">
+                            <h4>转让报价表</h4>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 text-gray">价格:</label>
+                        <div class="col-md-7">
+                            <!-- <input type="number" step="0.01" value="0.1" min="0.00" max="10.00" class="form-control"> -->
+                            <div class="input-group spinner" data-trigger="spinner">
+                              <input type="text" value="0" min="0" step="0.01" data-rule="currency" class="form-control">
+                              <span class="input-group-addon">
+                                <a href="javascript:;" class="spin-up" data-spin="up"><i class="fa fa-sort-asc"></i></a>
+                                <a href="javascript:;" class="spin-down" data-spin="down"><i class="fa fa-sort-desc"></i></a>
+                              </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group error">
+                        <div class="col-md-offset-3 col-md-9 ">
+                          报价需在80.00～120.00元/份之间
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 text-gray">数量:</label>
+                        <div class="col-md-7">
+                          <input type="text" value="0" pattern="[0-9]*" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group error">
+                        <div class="col-md-offset-3 col-md-9 ">
+                          挂单数量不得低于20份手持债券不足20份， 请一次性申报卖出
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 text-gray">验证:</label>
+                        <div class="col-md-7">
+                          <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group error">
+                        <div class="col-md-offset-3 col-md-9 gray-text">
+                          请填写验证码 ,35s后可<a href="#">重新发送</a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-md-offset-3 col-md-7">
+                        <input type="submit" value="支&nbsp;付" class="form-control btn btn-pay">
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+      <div class="my-modal modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-7">
+                            <h4>求购报价单</h4>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 text-gray">价格:</label>
+                        <div class="col-md-7">
+                            <div class="input-group spinner" data-trigger="spinner">
+                              <input type="text" value="0" min="0" step="0.01" data-rule="currency" class="form-control">
+                              <span class="input-group-addon">
+                                <a href="javascript:;" class="spin-up" data-spin="up"><i class="fa fa-sort-asc"></i></a>
+                                <a href="javascript:;" class="spin-down" data-spin="down"><i class="fa fa-sort-desc"></i></a>
+                              </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group error">
+                        <div class="col-md-offset-3 col-md-9 ">
+                          报价需在80.00～120.00元/份之间
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 text-gray">数量:</label>
+                        <div class="col-md-7">
+                          <input type="text"  pattern="[0-9]*" value="0" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group error">
+                        <div class="col-md-offset-3 col-md-9 ">
+                          挂单数量不得低于20份手持债券不足20份， 请一次性申报卖出
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-md-3 icon-safe">
+                        <img src="./image/safe.png" alt="">
+                      </div>
+                      <div class="col-md-7">
+                        <input type="submit" value="支&nbsp;付" class="form-control btn btn-pay">
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-modal modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-7">
+                            <h4>求购报价单</h4>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 text-gray">价格:</label>
+                        <div class="col-md-7">
+                            <div class="input-group spinner" data-trigger="spinner">
+                              <input type="text" value="0" min="0" step="0.01" data-rule="currency" class="form-control">
+                              <span class="input-group-addon">
+                                <a href="javascript:;" class="spin-up" data-spin="up"><i class="fa fa-sort-asc"></i></a>
+                                <a href="javascript:;" class="spin-down" data-spin="down"><i class="fa fa-sort-desc"></i></a>
+                              </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group error">
+                        <div class="col-md-offset-3 col-md-9 ">
+                          报价需在80.00～120.00元/份之间
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 text-gray">数量:</label>
+                        <div class="col-md-7">
+                          <input type="text"  pattern="[0-9]*" value="0" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group error">
+                        <div class="col-md-offset-3 col-md-9 ">
+                          挂单数量不得低于20份手持债券不足20份， 请一次性申报卖出
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-md-offset-3 col-md-7">
+                        <input type="submit" value="发&nbsp;布" class="form-control btn btn-pay">
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+<script type="text/javascript" src="./js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="./js/jquery.spinner.js"></script>
+
+</html>

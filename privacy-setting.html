@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提醒设置</title>
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/switchery.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="./js/html5shiv.min.js"></script>
+      <script src="./js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="row remind-setting">
+            <div class="text-center">
+                <h1>隐私设置</h1>
+            </div>
+            <hr width="110px" class="text-center" />
+
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <input class="checkbox-switch" type="checkbox">
+                </div>
+                <h4>信息显示</h4>
+                <p class="text-muted">自己的个人信息所见范围仅好友可见</p>
+            </div>
+
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <input class="checkbox-switch" type="checkbox">
+                </div>
+                <h4>评论权限</h4>
+                <p class="text-muted">未关注的人能够评论你的状态</p>
+            </div>
+
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <input class="checkbox-switch" type="checkbox">
+                </div>
+                <h4>私信权限</h4>
+                <p class="text-muted">未关注的人可以与你发起私信</p>
+            </div>
+
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <input class="checkbox-switch" type="checkbox">
+                </div>
+                <h4>议价权限</h4>
+                <p class="text-muted">未关注可以发起议价， 建议开启</p>
+            </div>
+
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <input class="checkbox-switch" type="checkbox">
+                </div>
+                <h4>图片水印</h4>
+                <p class="text-muted">图片有下方带有水印</p>
+            </div>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript" src="./js/switchery.js"></script>
+    <script type="text/javascript">
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.checkbox-switch'));
+
+        elems.forEach(function(html) {
+          var switchery = new Switchery(html, {color : '#7586A2'});
+        });
+    </script>
+</html>
