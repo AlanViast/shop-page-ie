@@ -123,16 +123,48 @@ body{
   margin-right: 15px;
 }
 
-.row.remind-setting > .col-md-12 > .btn.pull-right{
-  border: 1px solid #DDD;
-  color: #8D98AC;
+.row.remind-setting > .col-md-12 > .remind-setting-option > .btn{
+  position: absolute;
+  right: 30px;
+  top: 45px;
 }
 
-.row.remind-setting > .col-md-12 > .pull-right.btn-save{
+.row.remind-setting > .col-md-12 > .remind-setting-option > .btn.btn-save{
+  right: 114px;
+}
+
+.btn-modify,
+.btn-modify:hover,
+.btn-modify:focus{
+  color: #8D98AC;
+  background-color: #fff;
+  border-color: #DDD;
+}
+
+.btn-cancel,
+.btn-cancel:hover,
+.btn-cancel:focus{
+  color: #8D98AC;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.btn-save,
+.btn-save:hover,
+.btn-save:focus{
   color: #fff;
   background-color: #8D98AC;
   border-color: #8D98AC;
 }
+
+.btn-pay,
+.btn-pay:focus,
+.btn-pay:hover{
+  color: #FFF;
+  background-color: #F8846D;
+  border-color: #F8846D;
+}
+
 
 .row.remind-setting > hr.text-center{
   border-color: #D8D8D8;
@@ -155,11 +187,11 @@ body{
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
+/*
 .row.remind-setting > .col-md-12 > .remind-setting-option{
   padding-top: 15px;
 }
-
+ */
 .row.remind-setting > .col-md-12 > .remind-setting-option > .radio-group > div {
   margin-left: 30px;
 }
@@ -176,8 +208,6 @@ body{
   padding-bottom: 3px;
   padding-left: 8px;
 }
-
-
 /* remind setting End */
 
 /* Custom style*/
@@ -207,19 +237,6 @@ body{
   font-weight: 100;
 }
 
-.btn-pay{
-  color: #FFF;
-  background-color: #F8846D;
-  border-color: #F8846D;
-}
-.btn-pay:focus,
-.btn-pay:hover{
-  color: #FFF;
-  background-color: #F8846D;
-  border-color: #F8846D;
-}
-
-
 .stepper{
   width:150px;
 }
@@ -227,11 +244,13 @@ body{
   text-align: center;
 }
 
-
-
 /* Override bootstrap-spinner */
 .input-group-addon{
   padding: 0px 7px;
   background-color: #FFF;
 }
 
+
+.hidden{
+  display: hidden;
+}
