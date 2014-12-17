@@ -200,7 +200,7 @@ body{
   line-height: 20px;
 }
 
-.row.remind-setting > .col-md-12 > .remind-setting-option > p > div{
+.row.remind-setting > .col-md-12 > .remind-setting-option > p > span > div{
   margin-right: 5px;
 }
 

@@ -39,9 +39,9 @@
                         <input type="checkbox"> 我的推文被收藏
                     </p>
                     <p class="text-muted">
-                        <input type="checkbox"> 我的推文被回复
+                        <input type="checkbox" data-sub-group="sub-group-1"> 我的推文被回复
                     </p>
-                    <p class="radio-group">
+                    <p class="radio-group hidden" id="sub-group-1" >
                         <span class="text-muted">
                             <input type="radio" name="remind1" >全部提醒
                         </span>
@@ -49,6 +49,7 @@
                             <input type="radio" name="remind1" >仅关注的人提醒
                         </span>
                     </p>
+
                     <p class="text-muted">
                         <input type="checkbox"> 我被某人关注
                     </p>
@@ -56,9 +57,9 @@
                         <input type="checkbox"> 我收到一条私信
                     </p>
                     <p class="text-muted">
-                        <input type="checkbox"> 我被某人@
+                        <input type="checkbox" data-sub-group="sub-group-2"> 我被某人@
                     </p>
-                    <p class="text-muted radio-group">
+                    <p class="radio-group hidden"  id="sub-group-2">
                         <span class="text-muted">
                             <input type="radio" name="remind2" >全部提醒
                         </span>
@@ -101,23 +102,32 @@
                 <h4>促销活动<img src="./image/Fill 144.png" alt=""><img src="./image/Fill 185.png" alt=""></h4>
                 <div class="remind-setting-option" data-remind-index="1">
                     <a href="#" class="btn btn-modify btn-tab" data-remind-tab="2">修改</a>
-                    <p class="text-muted">设置邮件或手机关于融部落产品和功能更新的消息</p>
+                    <p>设置邮件或手机关于融部落产品和功能更新的消息</p>
                 </div>
 
                 <div class="remind-setting-option hidden" data-remind-index="2">
                     <a href="#" class="btn btn-cancel pull-right btn-tab" data-remind-tab="1">取消</a>
                     <a href="#" class="btn btn-save pull-right btn-tab" data-remind-tab="1">保存</a>
-                    <p class="text-muted">
-                        <input class="text-muted"t type="checkbox"> 手机
-                        <input type="checkbox"> 邮箱
-                        <span class="padding-left-30">
+                    <p>
+
+                        <span class="text-muted">
+                            <input class="checkbox-group" type="checkbox"> 手机
+                        </span>
+                        <span class="text-muted">
+                            <input class="checkbox-group" type="checkbox"> 邮箱
+                        </span>
+                        <span class="padding-left-30 tip text-muted">
                             关于融部落产品和功能更新的消息
                         </span>
                     </p>
-                    <p class="text-muted">
-                        <input type="checkbox"> 手机
-                        <input type="checkbox"> 邮箱
-                        <span class="padding-left-30">
+                    <p>
+                        <span class="text-muted">
+                            <input class="checkbox-group" type="checkbox"> 手机
+                        </span>
+                        <span class="text-muted">
+                            <input class="checkbox-group" type="checkbox"> 邮箱
+                        </span>
+                        <span class="padding-left-30 tip text-muted">
                             融部落的促销消息
                         </span>
                     </p>
@@ -138,15 +148,40 @@
           });
 
           $('input').on("ifChecked", function(event){
-            $(this).parent().removeClass('disabled');
-            $(this).parents("p").removeClass('text-muted');
-            $(this).parents("span").removeClass('text-muted');
+            var $parent = $(this).parents("span");
+            if($parent.size() == 1){
+                $parent.removeClass('text-muted');
+                if($(this).hasClass('checkbox-group')){
+                    $parent = $(this).parents("p");
+                    var $checkboxGroupArr = $parent.find('.checkbox-group:checked');
+                    if($checkboxGroupArr.size() == 1){
+                        $parent.find('.tip').removeClass('text-muted');
+                    }
+                }
+            } else {
+                var $parent = $(this).parents("p");
+                $parent.removeClass('text-muted');
+                var subId = $(this).data("sub-group");
+                $('#' + subId).removeClass('hidden');
+            }
           });
 
           $('input').on("ifUnchecked", function(event){
-            $(this).parent().addClass('disabled');
-            $(this).parents("p").addClass('text-muted');
-            $(this).parents("span").addClass('text-muted');
+            $parent = $(this).parents("span");
+            if($parent.size() == 1){
+                $parent.addClass('text-muted');
+                if($(this).hasClass('checkbox-group')){
+                    $parent = $(this).parents("p");
+                    var $checkboxGroupArr = $parent.find('.checkbox-group:checked');
+                    if($checkboxGroupArr.size() == 0){
+                        $parent.find('.tip').addClass('text-muted');
+                    }
+                }
+            } else {
+                $(this).parents("p").addClass('text-muted');
+                var subId = $(this).data("sub-group");
+                $('#' + subId).addClass('hidden');
+            }
           });
 
           $(".btn-tab").click(function(event) {
