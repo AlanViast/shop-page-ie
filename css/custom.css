@@ -126,7 +126,7 @@ body{
 .row.remind-setting > .col-md-12 > .remind-setting-option > .btn{
   position: absolute;
   right: 30px;
-  top: 45px;
+  top: 30px;
 }
 
 .row.remind-setting > .col-md-12 > .remind-setting-option > .btn.btn-save{
